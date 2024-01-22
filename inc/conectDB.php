@@ -9,6 +9,6 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $conn = new mysqli($host, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Помилка з'єднання з базою даних: " . $conn->connect_error);
+    die("Database connection error: " . $conn->connect_error);
 }
 ?>

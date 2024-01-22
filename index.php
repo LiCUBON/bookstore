@@ -66,12 +66,11 @@ function getBooksList($conn)
 
     <table class="bookList">
         <tr>
-            <th>Назва</th>
+            <th>Name</th>
             <th>Рік публікації</th>
-            <th>Жанр</th>
-            <th>Автор</th>
-            <th>Змінити</th>
-            <th>Видалить</th>
+            <th>Genre</th>
+            <th>Author</th>
+            <th>Delete</th>
         </tr>
         <?php
        
@@ -86,13 +85,12 @@ function getBooksList($conn)
                     <td><?= $row["published_year"] ?></td>
                     <td><?= $row["genre"] ?></td>
                     <th><?= $row["author"] ?></th>
-                    <th><a href="<?= $row["id"] ?>">Edit</a></th>
                     <th><a href="delete.php?id_memeber=<?= $row["id"] ?>">Delete</a></th>
                 </tr>
         <?php
             }
         }else {
-            echo "<tr><td colspan='4' style=\"text-align: center\">Нажаль книг не має(</td></tr>";
+            echo "<tr><td colspan='3' style=\"text-align: center\">Нажаль книг не має(</td></tr>";
         }
         ?>
     </table>
